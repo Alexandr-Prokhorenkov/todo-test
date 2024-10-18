@@ -1,0 +1,16 @@
+.todoItem {
+  width: 100%;
+  text-align: left;
+  padding: 10px 30px 10px 30px;
+  border-bottom: 1px solid var(--background-color);
+}
+
+.task {
+  font-weight: 400;
+  color: var(--main-color);
+}
+.completedTask {
+  font-weight: 400;
+  text-decoration: line-through;
+  color: var(--main-color);
+}

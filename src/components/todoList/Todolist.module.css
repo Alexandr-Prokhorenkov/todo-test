@@ -1,0 +1,46 @@
+.todolistContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.todoList {
+  min-height: 100px;
+  max-height: 300px;
+  width: 100%;
+  overflow-y: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  list-style: none;
+  color: rgb(192, 138, 171);
+  font-size: 25px;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.todoList::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+}
+
+.todoList::-webkit-scrollbar-thumb {
+  background-color: rgba(192, 138, 171, 0.5);
+  border-radius: 10px;
+}
+
+.todoList::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}

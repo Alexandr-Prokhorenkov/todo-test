@@ -1,0 +1,39 @@
+:root {
+  --main-color: rgb(110, 110, 110);
+  --background-color: rgba(0, 0, 0, 0.993);
+  --secondary-color: rgba(238, 238, 238, 0.993);
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.Container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  margin-top: 5%;
+}
+
+@media (max-width: 1900px) {
+  .Container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .Container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Container {
+    width: 80%;
+  }
+}

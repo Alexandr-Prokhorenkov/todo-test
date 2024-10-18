@@ -1,0 +1,13 @@
+.FormContainer {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.Form {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}

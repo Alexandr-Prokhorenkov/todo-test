@@ -1,0 +1,27 @@
+.btnContainer {
+  margin: 0;
+  width: 80%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 150px;
+  height: 56px;
+  border: 1px solid var(--background-color);
+}
+
+.active {
+  background: var(--background-color) !important;
+  color: white !important;
+}
+
+@media (max-width: 750px) {
+  .btnContainer {
+    width: 100%;
+    gap: 5px;
+    align-items: center;
+  }
+}

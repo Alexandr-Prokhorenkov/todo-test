@@ -1,0 +1,9 @@
+.todocount {
+  font-family: "Roboto", sans-serif;
+  color: var(--main-color);
+  font-weight: 300;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+}
