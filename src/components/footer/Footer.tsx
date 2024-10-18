@@ -5,11 +5,11 @@ import TodoCount from "../todoCount/TodoCount";
 import { useDispatch, useSelector } from "react-redux";
 import { removeComplitedTasks } from "../../services/slices/taskSlice";
 import { Button } from "@mui/material";
-import { RootState } from "../../services/store/store";
+import { selectTasks } from "../../services/selectors/selectors";
 
 const Footer = () => {
   const dispatch = useDispatch();
-  const tasks = useSelector((state: RootState) => state.tasks.tasks);
+  const tasks = useSelector(selectTasks);
 
   const handleRemoveCompleted = useCallback(() => {
     dispatch(removeComplitedTasks());
