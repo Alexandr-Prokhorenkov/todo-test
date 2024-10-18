@@ -32,7 +32,7 @@
 }
 
 .todoList::-webkit-scrollbar-thumb {
-  background-color: rgba(192, 138, 171, 0.5);
+  background-color: var(--background-color);
   border-radius: 10px;
 }
 
