@@ -6,7 +6,7 @@ export type Filters = {
 };
 
 const initialState: Filters = {
-  checked: "All" as FilterValuesType,
+  checked: "" as FilterValuesType,
 };
 
 const filterSlice = createSlice({

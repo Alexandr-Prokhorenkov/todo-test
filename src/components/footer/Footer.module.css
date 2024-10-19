@@ -5,10 +5,35 @@
   align-items: center;
 }
 
-@media (max-width: 690px) {
+.container .btn {
+  font-size: 0.9rem;
+  width: 30%;
+  height: 40px;
+  color: var(--main-color);
+  border-color: var(--background-color);
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
   .container {
     width: 100%;
     flex-direction: column;
+    justify-content: center;
     row-gap: 10px;
+  }
+  .container .btn {
+    width: 40%;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 400px) {
+  .container .btn {
+    font-size: 0.8rem;
   }
 }

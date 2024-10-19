@@ -1,20 +1,14 @@
 import React, { useMemo } from "react";
 import classes from "./Additemform.module.css";
-import { Button } from "@mui/material";
+import { Box, Button, useMediaQuery } from "@mui/material";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { addTask } from "../../services/slices/taskSlice";
 import { FormValues } from "../../types/types";
 import TodoTextInput from "../todoTextInput/TodoTextInput";
 
-const buttonStyles = {
-  background: "var(--background-color)",
-  fontSize: "1rem",
-  width: "30%",
-  height: "56px",
-};
-
 const AddItemForm = () => {
+  const isMobile = useMediaQuery("(max-width: 450px)");
   const dispatch = useDispatch();
   const {
     register,
@@ -25,7 +19,6 @@ const AddItemForm = () => {
 
   const onSubmit: SubmitHandler<FormValues> = useMemo(
     () => (data: FormValues) => {
-      console.log("Form data submitted:", data);
       dispatch(addTask(data.todo));
       reset();
     },
@@ -33,8 +26,8 @@ const AddItemForm = () => {
   );
 
   return (
-    <div className={classes.FormContainer}>
-      <form className={classes.Form} onSubmit={handleSubmit(onSubmit)}>
+    <Box className={classes.FormContainer}>
+      <Box className={classes.Form} component="form" onSubmit={handleSubmit(onSubmit)}>
         <TodoTextInput
           fullWidth
           id="filled-basic"
@@ -47,11 +40,11 @@ const AddItemForm = () => {
           error={!!errors.todo}
           helperText={errors.todo?.message}
         />
-        <Button type="submit" variant="contained" sx={buttonStyles}>
-          + ADD TODO
+        <Button className={classes.addTodoButton} type="submit" variant="contained">
+          {isMobile ? "+" : "+ ADD TODO"}
         </Button>
-      </form>
-    </div>
+      </Box>
+    </Box>
   );
 };
 

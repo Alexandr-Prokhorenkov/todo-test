@@ -11,3 +11,16 @@
   gap: 10px;
   justify-content: space-between;
 }
+
+.Form .addTodoButton {
+  background: var(--background-color);
+  width: 30%;
+  font-size: 1rem;
+  height: 56px;
+}
+
+@media (max-width: 450px) {
+  .Form .addTodoButton {
+    font-size: 1.5rem;
+  }
+}

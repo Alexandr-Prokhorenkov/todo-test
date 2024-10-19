@@ -6,6 +6,7 @@ import Header from "./components/header/Header";
 import { useSelector } from "react-redux";
 import Footer from "./components/footer/Footer";
 import { selectFilter, selectTasks } from "./services/selectors/selectors";
+import { Box } from "@mui/material";
 
 function App() {
   const tasks = useSelector(selectTasks);
@@ -23,14 +24,14 @@ function App() {
   }, [filter, tasks]);
 
   return (
-    <div className="App">
-      <div className="Container">
+    <Box className="App">
+      <Box className="Container">
         <Header />
         <AddItemForm />
         <TodoList tasks={getFilteredTasks()} />
         <Footer />
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }
 

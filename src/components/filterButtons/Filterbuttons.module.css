@@ -7,10 +7,12 @@
   align-items: center;
 }
 
-.btn {
-  width: 150px;
-  height: 56px;
-  border: 1px solid var(--background-color);
+.btnContainer .btn {
+  width: 20%;
+  height: 40px;
+  color: var(--main-color);
+  border-color: var(--background-color);
+  font-size: 0.9rem;
 }
 
 .active {
@@ -21,7 +23,25 @@
 @media (max-width: 750px) {
   .btnContainer {
     width: 100%;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
+  }
+ .btnContainer.btn {
+    max-width: 200px;
+    line-height: 0.5;
+    width: 50%;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .btnContainer .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .btnContainer .btn {
+    font-size: 0.8rem;
   }
 }

@@ -1,17 +1,9 @@
 import React, { useCallback } from "react";
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import classes from "./Filterbuttons.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFilter, selectTasks } from "../../services/selectors/selectors";
 import { changeState } from "../../services/slices/filterSlice";
-
-const buttonStyles = {
-  borderColor: "var(--background-color)",
-  fontSize: "0.8rem",
-  width: "20%",
-  height: "40px",
-  color: "var(--main-color)",
-};
 
 const FilterButtons = () => {
   const dispatch = useDispatch();
@@ -38,17 +30,17 @@ const FilterButtons = () => {
   );
 
   return (
-    <div className={classes.btnContainer}>
-      <Button color="secondary" className={getButtonClass("All")} variant="outlined" onClick={handleAllClick} disabled={tasks.length === 0} sx={buttonStyles}>
+    <Box className={classes.btnContainer}>
+      <Button className={getButtonClass("All")} variant="outlined" onClick={handleAllClick} disabled={tasks.length === 0}>
         All
       </Button>
-      <Button color="secondary" className={getButtonClass("Active")} variant="outlined" onClick={handleActiveClick} disabled={tasks.filter((task) => !task.isDone).length === 0} sx={buttonStyles}>
+      <Button color="secondary" className={getButtonClass("Active")} variant="outlined" onClick={handleActiveClick} disabled={tasks.filter((task) => !task.isDone).length === 0}>
         Active
       </Button>
-      <Button color="secondary" className={getButtonClass("Completed")} variant="outlined" onClick={handleCompletedClick} disabled={tasks.filter((task) => task.isDone).length === 0} sx={buttonStyles}>
+      <Button color="secondary" className={getButtonClass("Completed")} variant="outlined" onClick={handleCompletedClick} disabled={tasks.filter((task) => task.isDone).length === 0}>
         Completed
       </Button>
-    </div>
+    </Box>
   );
 };
 
