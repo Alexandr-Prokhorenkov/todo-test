@@ -37,10 +37,10 @@ const FilterButtons = () => {
       <Button className={getButtonClass("All")} variant="outlined" onClick={handleAllClick} disabled={tasks.length === 0}>
         All
       </Button>
-      <Button color="secondary" className={getButtonClass("Active")} variant="outlined" onClick={handleActiveClick} disabled={tasks.filter((task) => !task.isDone).length === 0}>
+      <Button className={getButtonClass("Active")} variant="outlined" onClick={handleActiveClick} disabled={tasks.filter((task) => !task.isDone).length === 0}>
         Active
       </Button>
-      <Button color="secondary" className={getButtonClass("Completed")} variant="outlined" onClick={handleCompletedClick} disabled={tasks.filter((task) => task.isDone).length === 0}>
+      <Button className={getButtonClass("Completed")} variant="outlined" onClick={handleCompletedClick} disabled={tasks.filter((task) => task.isDone).length === 0}>
         Completed
       </Button>
     </Box>
