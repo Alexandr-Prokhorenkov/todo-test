@@ -24,9 +24,12 @@ const FilterButtons = () => {
 
   const getButtonClass = useCallback(
     (filterType: string) => {
+      if (tasks.length === 0) {
+        return `${classes.btn}`;
+      }
       return `${classes.btn} ${filter === filterType ? classes.active : ""}`;
     },
-    [filter]
+    [filter, tasks]
   );
 
   return (
